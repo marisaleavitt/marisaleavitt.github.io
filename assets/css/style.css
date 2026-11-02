@@ -294,3 +294,40 @@ footer {
         height: 300px;
     }
 }
+
+.students {
+    max-width: 1000px;
+    margin-top: 3rem;
+}
+
+.student {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+
+    margin-bottom: 4rem;
+
+    align-items: start;
+}
+
+.student img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.student h3 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+@media (max-width: 700px) {
+    .student {
+        grid-template-columns: 1fr;
+    }
+
+    .student img {
+        width: 200px;
+        height: 200px;
+    }
+}
