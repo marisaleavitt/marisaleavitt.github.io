@@ -1,157 +1,117 @@
-/* ========================================
-   MARISA COHN WEBSITE
-   editorial / archive-inspired style
-======================================== */
+/* ==========================================
+   PROJECT ARCHIVE
+   Minimal editorial portfolio
+========================================== */
 
-/* Google Fonts:
-Add this line inside <head>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-*/
-
-
-/* ========================================
-   GLOBAL
-======================================== */
+:root {
+    --bg: #f8f7f3;
+    --text: #111;
+    --muted: #777;
+    --border: #e8e8e8;
+}
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
+    background: var(--bg);
+    color: var(--text);
 
-    background: #faf9f6;
+    font-family: Georgia, serif;
 
-    color: #222;
-
-    margin: 0;
+    line-height: 1.6;
 
     padding: 3rem;
 
-    max-width: 1400px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 1.25rem;
-
-    line-height: 1.6;
+    max-width: 1600px;
+    margin: auto;
 }
 
-
-/* ========================================
-   TYPOGRAPHY
-======================================== */
-
-h1,
-h2,
-h3,
-h4 {
-    font-weight: 400;
-    line-height: 1.15;
-}
-
-h1 {
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-top: 4rem;
-}
-
-h3 {
-    font-size: 1.4rem;
-}
-
-p {
-    max-width: 70ch;
-}
-
-a {
-    color: inherit;
-}
-
-a:hover {
-    opacity: 0.65;
-}
-
-.intro {
-    font-size: 1.8rem;
-    max-width: 28ch;
-    margin-bottom: 3rem;
-}
-
-
-/* ========================================
+/* -------------------------
    NAVIGATION
-======================================== */
+------------------------- */
 
 nav {
+    display: flex;
+    gap: 2rem;
 
-    font-family:
-        "Inter",
-        Arial,
-        sans-serif;
+    margin-bottom: 5rem;
+
+    font-family: Arial, sans-serif;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.08em;
+    font-size: .8rem;
 
-    font-size: 0.8rem;
-
-    margin-bottom: 5rem;
+    letter-spacing: .08em;
 }
 
 nav a {
-
+    color: black;
     text-decoration: none;
-
-    margin-right: 2rem;
-
-    transition: opacity .2s ease;
 }
 
 nav a:hover {
-    opacity: .45;
+    opacity: .5;
 }
 
+/* -------------------------
+   HEADINGS
+------------------------- */
 
-/* ========================================
-   CONTENT COLUMN
-======================================== */
+h1 {
+    font-size: 4rem;
+    font-weight: normal;
 
-.content {
-    max-width: 760px;
+    margin-bottom: 2rem;
 }
 
+h2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 
-/* ========================================
-   SELECTED WORKS GRID
-======================================== */
+    font-weight: normal;
+}
+
+p {
+    max-width: 700px;
+    margin-bottom: 1.25rem;
+}
+
+/* -------------------------
+   ABOUT PAGE
+------------------------- */
+
+.intro {
+    font-size: 1.7rem;
+
+    max-width: 28ch;
+
+    margin-bottom: 4rem;
+}
+
+/* -------------------------
+   PROJECT GRID
+------------------------- */
 
 .works-grid {
 
     display: grid;
 
     grid-template-columns:
-        repeat(12, 1fr);
+        repeat(auto-fit, minmax(350px, 1fr));
 
-    gap: 2rem;
+    gap: 1.5rem;
+
+    margin-top: 3rem;
 }
+
+/* -------------------------
+   PROJECT TILE
+------------------------- */
 
 .project {
 
@@ -160,161 +120,103 @@ nav a:hover {
     overflow: hidden;
 }
 
+.project a {
+    display: block;
+}
+
 .project img {
 
     width: 100%;
+    height: 400px;
+
+    object-fit: cover;
 
     display: block;
 
-    transition: transform .4s ease;
-
-    filter: contrast(96%);
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
 }
 
 .project:hover img {
 
     transform: scale(1.02);
+
+    opacity: .95;
 }
 
+/* -------------------------
+   TITLE OVERLAY
+------------------------- */
 
-/* ===== Overlay ===== */
-
-.overlay {
+.project-title {
 
     position: absolute;
 
     inset: 0;
 
     background:
-        rgba(250, 249, 246, 0.92);
+        rgba(250,248,243,.92);
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
 
+    padding: 2rem;
+
     opacity: 0;
 
-    transition: .25s ease;
-
-    padding: 1rem;
+    transition: opacity .25s ease;
 }
 
-.project:hover .overlay {
+.project:hover .project-title {
     opacity: 1;
 }
 
-.overlay h3 {
+.project-title h3 {
 
-    font-size: 2rem;
+    font-size: 1.8rem;
 
-    margin: 0;
+    font-weight: normal;
 
-    font-weight: 400;
+    line-height: 1.2;
 }
 
-
-/* ========================================
-   FEATURED GRID VARIANTS
-======================================== */
-
-.project-wide {
-    grid-column: span 8;
-}
-
-.project-medium {
-    grid-column: span 6;
-}
-
-.project-small {
-    grid-column: span 4;
-}
-
-.project-tall {
-    grid-column: span 6;
-}
-
-/* ========================================
-   DESCRIPTION TOGGLE
-======================================== */
-
-.toggle-btn {
-
-    border: none;
-
-    background: none;
-
-    padding: 0;
-
-    margin-top: 1rem;
-
-    cursor: pointer;
-
-    font-family:
-        "Inter",
-        sans-serif;
-
-    font-size: .8rem;
-
-    letter-spacing: .08em;
-
-    text-transform: uppercase;
-}
-
-.toggle-btn:hover {
-    opacity: .5;
-}
-
-.description {
-
-    display: none;
-
-    margin-top: 1rem;
-
-    max-width: 42ch;
-}
-
-.description.show {
-    display: block;
-}
-
-
-/* ========================================
-   PROJECT DETAIL PAGES
-======================================== */
+/* -------------------------
+   PROJECT PAGE
+------------------------- */
 
 .project-page {
 
-    max-width: 850px;
+    max-width: 900px;
 }
 
 .project-page img {
 
     width: 100%;
 
-    margin: 3rem 0;
+    margin: 2rem 0 3rem 0;
 }
 
 .project-meta {
 
-    color: #666;
+    color: var(--muted);
 
-    font-family:
-        "Inter",
-        sans-serif;
+    text-transform: uppercase;
 
-    font-size: .9rem;
+    font-size: .85rem;
+
+    font-family: Arial, sans-serif;
 
     margin-bottom: 2rem;
 }
 
-
-/* ========================================
-   STUDENT PAGE
-======================================== */
+/* -------------------------
+   STUDENTS
+------------------------- */
 
 .students {
 
@@ -322,9 +224,7 @@ nav a:hover {
 
     flex-direction: column;
 
-    gap: 5rem;
-
-    margin-top: 3rem;
+    gap: 4rem;
 }
 
 .student {
@@ -342,62 +242,18 @@ nav a:hover {
 .student img {
 
     width: 180px;
-
     height: 180px;
 
     object-fit: cover;
-
-    filter: grayscale(10%);
 }
 
 .student h3 {
-    margin-top: 0;
+    margin-bottom: .5rem;
 }
 
-.student p {
-    margin-top: .5rem;
-}
-
-
-/* ========================================
-   IMAGE CAPTIONS
-======================================== */
-
-.caption {
-
-    font-size: .9rem;
-
-    color: #777;
-
-    margin-top: .5rem;
-
-    font-family:
-        "Inter",
-        sans-serif;
-}
-
-
-/* ========================================
-   QUOTES
-======================================== */
-
-blockquote {
-
-    border-left: 1px solid #ddd;
-
-    padding-left: 2rem;
-
-    margin-left: 0;
-
-    font-size: 1.6rem;
-
-    font-style: italic;
-}
-
-
-/* ========================================
+/* -------------------------
    FOOTER
-======================================== */
+------------------------- */
 
 footer {
 
@@ -405,67 +261,36 @@ footer {
 
     padding-top: 2rem;
 
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid var(--border);
 
-    font-family:
-        "Inter",
-        sans-serif;
-
-    font-size: .85rem;
-
-    color: #666;
+    color: var(--muted);
 }
 
-
-/* ========================================
-   SUBTLE ARCHIVAL IMAGE STYLE
-======================================== */
-
-.archival img {
-
-    filter:
-        contrast(95%)
-        saturate(85%)
-        brightness(101%);
-}
-
-
-/* ========================================
+/* -------------------------
    MOBILE
-======================================== */
+------------------------- */
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
 
     body {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
-    .works-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-wide,
-    .project-medium,
-    .project-small,
-    .project-tall {
-        grid-column: auto;
+    h1 {
+        font-size: 2.8rem;
     }
 
     .student {
-
         grid-template-columns: 1fr;
     }
 
     .student img {
-
         width: 100%;
-
-        max-width: 250px;
-
+        max-width: 300px;
         height: auto;
     }
 
-    .intro {
-        font-size: 1.4rem;
+    .project img {
+        height: 300px;
     }
 }
