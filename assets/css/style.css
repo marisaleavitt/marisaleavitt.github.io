@@ -1,1 +1,86 @@
+body {
+    font-family: Avenir, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    color: black;
+}
 
+nav {
+    margin-bottom: 60px;
+}
+
+nav a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,.55);
+
+    color: white;
+
+    opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity .3s;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.description {
+    display: none;
+    margin-top: 10px;
+}
+
+.description.show {
+    display: block;
+}
+
+.students {
+    display: grid;
+    gap: 40px;
+}
+
+.student {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 25px;
+}
+
+.student img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
