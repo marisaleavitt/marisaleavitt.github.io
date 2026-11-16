@@ -2,225 +2,344 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Students | Marisa Cohn</title>
+<meta charset="UTF-8">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Students | Marisa Cohn</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap"
-          rel="stylesheet">
+<style>
+
+/* =====================================================
+   STUDENTS PAGE
+
+   This page foregrounds people rather than projects.
+
+   Layout:
+
+       photo     text
+
+   Kept intentionally simple and easy to maintain.
+
+===================================================== */
+
+
+/* =====================================================
+   FONTS
+
+===================================================== */
+
+@import url('https://fonts.cdnfonts.com/css/avenir');
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
+
+
+/* =====================================================
+   VARIABLES
+
+===================================================== */
+
+:root {
+
+    --bg: #f7f4ee;
+
+    --text: #111111;
+
+    --muted: #777777;
+
+    --border: #ddd8cf;
+
+    --heading: "KaTeX_Main", serif;
+
+    --body: "Avenir", sans-serif;
+}
+
+
+/* =====================================================
+   RESET
+
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PAGE
+
+===================================================== */
+
+body {
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-family: var(--body);
+
+    line-height: 1.7;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 3rem;
+}
+
+
+/* =====================================================
+   NAVIGATION
+
+===================================================== */
+
+nav {
+
+    display: flex;
+
+    gap: 2rem;
+
+    margin-bottom: 5rem;
+
+    font-size: .8rem;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+}
+
+
+nav a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: opacity .2s ease;
+}
+
+
+nav a:hover {
+
+    opacity: .5;
+}
+
+
+/* =====================================================
+   PAGE TITLE
+
+===================================================== */
+
+h1 {
+
+    font-family: var(--heading);
+
+    font-weight: normal;
+
+    font-size: clamp(2rem,4vw,4rem);
+
+    margin-bottom: 4rem;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+
+===================================================== */
+
+h2 {
+
+    font-family: var(--heading);
+
+    font-weight: normal;
+
+    font-size: 1.8rem;
+
+    margin-top: 4rem;
+
+    margin-bottom: 2rem;
+}
+
+
+/* =====================================================
+   STUDENT ENTRY
+
+   Two-column structure:
+
+   [photo] [text]
+
+===================================================== */
+
+.student {
+
+    display: grid;
+
+    grid-template-columns: 170px 1fr;
+
+    gap: 2.5rem;
+
+    align-items: start;
+
+    padding-bottom: 3rem;
+
+    margin-bottom: 3rem;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* =====================================================
+   STUDENT PHOTO
+
+===================================================== */
+
+.student img {
+
+    width: 170px;
+
+    height: 170px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   STUDENT NAME
+
+===================================================== */
+
+.student-name {
+
+    font-family: var(--heading);
+
+    font-size: 1.4rem;
+
+    line-height: 1.2;
+
+    margin-bottom: .5rem;
+}
+
+
+/* =====================================================
+   STUDENT STATUS
+
+   Examples:
+
+   PhD Student
+   MSc Thesis Student
+   Former PhD Student
+
+===================================================== */
+
+.student-role {
+
+    color: var(--muted);
+
+    font-size: .85rem;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+}
+
+
+/* =====================================================
+   STUDENT DESCRIPTION
+
+===================================================== */
+
+.student-bio {
+
+    max-width: 65ch;
+
+    margin-bottom: 1rem;
+}
+
+
+/* =====================================================
+   OPTIONAL LINKS
+
+===================================================== */
+
+.student-links {
+
+    font-size: .95rem;
+}
+
+
+.student-links a {
+
+    color: inherit;
+}
+
+
+.student-links a:hover {
+
+    opacity: .6;
+}
+
+
+/* =====================================================
+   MOBILE
+
+===================================================== */
+
+@media (max-width: 800px) {
+
+    body {
+
+        padding: 1.5rem;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        gap: 1rem;
+    }
+
+    .student {
+
+        grid-template-columns: 1fr;
+    }
+
+    .student img {
+
+        width: 220px;
+
+        height: 220px;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">About</a>
-        <a href="selected-works.html">Selected Works</a>
-        <a href="students.html">Students</a>
-    </nav>
 
-    <main>
 
-        <h1>Students & Collaborators</h1>
+<!-- =====================================
+     NAVIGATION
+===================================== -->
 
-        <p class="intro">
-            Research is always collective. This page highlights current students,
-            former students, visiting researchers, and collaborators whose work
-            intersects with questions of design, temporality, transition,
-            care, and sociotechnical change.
-        </p>
+<nav>
 
-        <!-- CURRENT STUDENTS -->
+    <a href="index.html">Home</a>
 
-        <section>
+    <a href="research.html">Research</a>
 
-            <h2>Current Students</h2>
+    <a href="writing.html">Writing</a>
 
-            <div class="students">
+    <a href="students.html">Students</a>
 
-                <div class="student">
-
-                    <img src="assets/images/student1.jpg"
-                         alt="Student Name">
-
-                    <div>
-
-                        <h3>Student Name</h3>
-
-                        <p>
-                            <em>MSc Student, Design & Innovation</em>
-                        </p>
-
-                        <p>
-                            Investigating climate imaginaries and grassroots social
-                            movements in the European periphery. Their work examines
-                            how communities imagine alternatives to dominant
-                            techno-optimistic transition narratives.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="student">
-
-                    <img src="assets/images/student2.jpg"
-                         alt="Student Name">
-
-                    <div>
-
-                        <h3>Student Name</h3>
-
-                        <p>
-                            <em>MSc Student, Design & Innovation</em>
-                        </p>
-
-                        <p>
-                            Exploring memory, care, and aging through ethnographic and
-                            participatory approaches, with a focus on overlooked forms
-                            of social support and everyday temporal practices.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- FORMER STUDENTS -->
-
-        <section>
-
-            <h2>Former Students</h2>
-
-            <div class="students">
-
-                <div class="student">
-
-                    <img src="assets/images/former-student1.jpg"
-                         alt="Former Student">
-
-                    <div>
-
-                        <h3>Former Student Name</h3>
-
-                        <p>
-                            <em>MSc Thesis, 2025</em>
-                        </p>
-
-                        <p>
-                            Examined participatory approaches to future-making in
-                            environmental initiatives, combining design methods with
-                            qualitative fieldwork.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="student">
-
-                    <img src="assets/images/former-student2.jpg"
-                         alt="Former Student">
-
-                    <div>
-
-                        <h3>Former Student Name</h3>
-
-                        <p>
-                            <em>MSc Thesis, 2024</em>
-                        </p>
-
-                        <p>
-                            Investigated digital infrastructures and their role in
-                            shaping experiences of uncertainty, anticipation, and care.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- VISITING RESEARCHERS -->
-
-        <section>
-
-            <h2>Visiting Researchers & Collaborators</h2>
-
-            <div class="students">
-
-                <div class="student">
-
-                    <img src="assets/images/collaborator1.jpg"
-                         alt="Collaborator Name">
-
-                    <div>
-
-                        <h3>Collaborator Name</h3>
-
-                        <p>
-                            <em>Visiting Researcher</em>
-                        </p>
-
-                        <p>
-                            Collaborates on research concerning transition,
-                            temporality, and alternative future imaginaries,
-                            contributing comparative perspectives and ethnographic
-                            methods.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="student">
-
-                    <img src="assets/images/collaborator2.jpg"
-                         alt="Collaborator Name">
-
-                    <div>
-
-                        <h3>Collaborator Name</h3>
-
-                        <p>
-                            <em>Research Collaborator</em>
-                        </p>
-
-                        <p>
-                            Works across design, anthropology, and critical social
-                            theory to examine collective responses to environmental,
-                            technological, and social change.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <p>
-            Interested in supervision, collaboration, or visiting research opportunities?
-            Please get in touch.
-        </p>
-
-    </footer>
-
-</body>
-
-</html>
+    <a href="about.html">About
