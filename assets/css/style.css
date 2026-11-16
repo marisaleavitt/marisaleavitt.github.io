@@ -1,198 +1,422 @@
-/* ==========================================
-   PROJECT ARCHIVE
-   Minimal editorial portfolio
-========================================== */
+/* ============================================================
+   RESEARCH PORTFOLIO / PROJECT ARCHIVE
+
+   DESIGN IDEA
+   ------------------------------------------------------------
+   This site is designed more like an exhibition catalogue,
+   artist publication, or research archive than a traditional
+   academic CV website.
+
+   Key principles:
+
+   • Large expressive headings
+   • Clean sans-serif reading text
+   • Images are treated like archival material
+   • Project titles sit BELOW images
+   • Strong whitespace
+   • Responsive layout
+   • Minimal visual clutter
+
+============================================================ */
+
+
+/* ============================================================
+   FONT IMPORTS
+
+   Avenir = clean contemporary reading font
+
+   KaTeX_Main = mathematical typography inspired by
+   Euler / TeX typography. Gives titles a slightly
+   intellectual / retro / publication feel.
+
+   If Avenir isn't available the browser will use
+   similar sans serif fonts.
+
+============================================================ */
+
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
+
+
+/* ============================================================
+   CSS VARIABLES
+
+   Variables store values that we might want to reuse.
+
+   Instead of writing the same colour twenty times
+   we define it once here.
+
+============================================================ */
 
 :root {
-    --bg: #f8f7f3;
-    --text: #111;
+
+    /* Warm paper-like background */
+    --bg: #f6f4ef;
+
+    /* Main text colour */
+    --text: #121212;
+
+    /* Secondary text */
     --muted: #777;
-    --border: #e8e8e8;
+
+    /* Borders */
+    --border: #ddd8cf;
+
+    /* Heading font */
+    --heading: "KaTeX_Main", serif;
+
+    /* Reading font */
+    --body: "Avenir", sans-serif;
 }
 
+
+/* ============================================================
+   GLOBAL RESET
+
+   Browsers all have their own default spacing.
+
+   This clears everything and gives us a predictable
+   starting point.
+
+============================================================ */
+
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
 }
 
-body {
-    background: var(--bg);
-    color: var(--text);
 
-    font-family: Georgia, serif;
+/* ============================================================
+   TEXT SELECTION
 
-    line-height: 1.6;
+   Colour shown when user highlights text.
 
-    padding: 3rem;
+   Small touch, but makes the site feel designed.
 
-    max-width: 1600px;
-    margin: auto;
+============================================================ */
+
+::selection {
+
+    background: #d8ccb3;
+
+    color: black;
 }
 
-/* -------------------------
+
+/* ============================================================
+   BODY
+
+   Governs entire page.
+
+============================================================ */
+
+body {
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-family: var(--body);
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.01em;
+
+    max-width: 1600px;
+
+    margin: auto;
+
+    padding: 3rem;
+}
+
+
+/* ============================================================
    NAVIGATION
-------------------------- */
+
+   Top navigation behaves almost like the masthead
+   of a publication.
+
+============================================================ */
 
 nav {
+
     display: flex;
+
+    flex-wrap: wrap;
+
     gap: 2rem;
+
+    padding-bottom: 1rem;
 
     margin-bottom: 5rem;
 
-    font-family: Arial, sans-serif;
+    border-bottom: 1px solid var(--border);
+
+    font-family: var(--body);
 
     text-transform: uppercase;
 
     font-size: .8rem;
 
-    letter-spacing: .08em;
+    letter-spacing: .14em;
 }
+
+
+/* navigation links */
 
 nav a {
-    color: black;
+
+    color: var(--text);
+
     text-decoration: none;
+
+    transition: opacity .2s ease;
 }
+
+
+/* subtle fade when hovering */
 
 nav a:hover {
-    opacity: .5;
+
+    opacity: .55;
 }
 
-/* -------------------------
-   HEADINGS
-------------------------- */
+
+/* ============================================================
+   MAIN PAGE TITLE
+
+   Large dramatic title.
+
+   clamp() automatically scales between screen sizes.
+
+============================================================ */
 
 h1 {
-    font-size: 4rem;
+
+    font-family: var(--heading);
+
     font-weight: normal;
 
-    margin-bottom: 2rem;
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    line-height: .9;
+
+    max-width: 10ch;
+
+    margin-bottom: 3rem;
 }
+
+
+/* ============================================================
+   SECTION TITLES
+
+============================================================ */
 
 h2 {
-    margin-top: 4rem;
-    margin-bottom: 1rem;
+
+    font-family: var(--heading);
+
+    font-size: 2.4rem;
 
     font-weight: normal;
+
+    margin-top: 5rem;
+
+    margin-bottom: 1rem;
 }
+
+
+/* ============================================================
+   PARAGRAPHS
+
+   Restricting line length improves readability.
+
+============================================================ */
 
 p {
+
     max-width: 700px;
-    margin-bottom: 1.25rem;
+
+    margin-bottom: 1.4rem;
 }
 
-/* -------------------------
-   ABOUT PAGE
-------------------------- */
+
+/* ============================================================
+   INTRO PARAGRAPH
+
+   Large description usually placed beneath the title.
+
+============================================================ */
 
 .intro {
-    font-size: 1.7rem;
 
-    max-width: 28ch;
+    font-size: 1.6rem;
 
-    margin-bottom: 4rem;
+    line-height: 1.45;
+
+    max-width: 32ch;
+
+    margin-bottom: 5rem;
 }
 
-/* -------------------------
+
+/* ============================================================
    PROJECT GRID
-------------------------- */
+
+   12-column system.
+
+   This allows some projects to become larger than
+   others and creates a more curated appearance.
+
+============================================================ */
 
 .works-grid {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(12, 1fr);
 
-    gap: 1.5rem;
+    gap: 2rem;
 
     margin-top: 3rem;
 }
 
-/* -------------------------
+
+/* ============================================================
    PROJECT TILE
-------------------------- */
+
+============================================================ */
 
 .project {
 
-    position: relative;
-
-    overflow: hidden;
+    grid-column: span 4;
 }
+
+
+/* every fifth project becomes larger */
+
+.project:nth-child(5n) {
+
+    grid-column: span 8;
+}
+
+
+/* remove default link styling */
 
 .project a {
-    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
 }
+
+
+/* ============================================================
+   PROJECT IMAGES
+
+   Images begin slightly muted.
+
+   Hovering restores colour and contrast.
+
+   This creates an archival feeling.
+
+============================================================ */
 
 .project img {
 
     width: 100%;
-    height: 400px;
+
+    aspect-ratio: 4 / 3;
 
     object-fit: cover;
 
     display: block;
 
+    background: #e8e3d7;
+
+    filter:
+        saturate(.75)
+        contrast(.95)
+        brightness(.98);
+
     transition:
-        transform .3s ease,
-        opacity .3s ease;
+        transform .6s ease,
+        filter .6s ease;
 }
+
+
+/* hover image effect */
 
 .project:hover img {
 
-    transform: scale(1.02);
+    transform: scale(1.03);
 
-    opacity: .95;
+    filter:
+        saturate(1)
+        contrast(1)
+        brightness(1);
 }
 
-/* -------------------------
-   TITLE OVERLAY
-------------------------- */
+
+/* ============================================================
+   PROJECT TITLE
+
+   Unlike portfolio templates, titles are NOT overlays.
+
+   They sit beneath each image like captions in a
+   catalogue or archive.
+
+============================================================ */
 
 .project-title {
 
-    position: absolute;
+    margin-top: .85rem;
 
-    inset: 0;
+    padding-right: 1rem;
+}
 
-    background:
-        rgba(250,248,243,.92);
 
-    display: flex;
+.project-title h3 {
 
-    align-items: center;
-    justify-content: center;
+    font-family: var(--heading);
 
-    text-align: center;
+    font-size: 1.6rem;
 
-    padding: 2rem;
+    font-weight: normal;
 
-    opacity: 0;
+    line-height: 1.15;
 
     transition: opacity .25s ease;
 }
 
-.project:hover .project-title {
-    opacity: 1;
+
+/* subtle response on hover */
+
+.project:hover .project-title h3 {
+
+    opacity: .6;
 }
 
-.project-title h3 {
 
-    font-size: 1.8rem;
+/* ============================================================
+   SINGLE PROJECT PAGE
 
-    font-weight: normal;
-
-    line-height: 1.2;
-}
-
-/* -------------------------
-   PROJECT PAGE
-------------------------- */
+============================================================ */
 
 .project-page {
 
     max-width: 900px;
 }
+
+
+/* large project image */
 
 .project-page img {
 
@@ -201,59 +425,107 @@ p {
     margin: 2rem 0 3rem 0;
 }
 
+
+/* ============================================================
+   PROJECT METADATA
+
+   Example:
+   2025 / Exhibition / Copenhagen
+
+============================================================ */
+
 .project-meta {
 
-    color: var(--muted);
+    font-family: var(--body);
+
+    font-size: .72rem;
+
+    letter-spacing: .14em;
 
     text-transform: uppercase;
 
-    font-size: .85rem;
-
-    font-family: Arial, sans-serif;
+    color: var(--muted);
 
     margin-bottom: 2rem;
 }
 
-/* -------------------------
-   STUDENTS
-------------------------- */
+
+/* ============================================================
+   STUDENTS PAGE
+
+============================================================ */
 
 .students {
 
-    display: flex;
+    max-width: 1000px;
 
-    flex-direction: column;
-
-    gap: 4rem;
+    margin-top: 4rem;
 }
+
+
+/* ============================================================
+   INDIVIDUAL STUDENT ENTRY
+
+   Layout:
+
+   [photo] [content]
+
+============================================================ */
 
 .student {
 
     display: grid;
 
-    grid-template-columns:
-        180px 1fr;
+    grid-template-columns: 170px 1fr;
 
-    gap: 2rem;
+    gap: 2.5rem;
 
     align-items: start;
+
+    margin-bottom: 4rem;
 }
+
+
+/* student portrait */
 
 .student img {
 
-    width: 180px;
-    height: 180px;
+    width: 170px;
+
+    height: 170px;
 
     object-fit: cover;
+
+    filter: saturate(.85);
 }
 
+
+/* student name */
+
 .student h3 {
+
+    font-family: var(--heading);
+
+    font-size: 1.5rem;
+
+    font-weight: normal;
+
     margin-bottom: .5rem;
 }
 
-/* -------------------------
+
+/* student description */
+
+.student p {
+
+    margin-bottom: 0;
+}
+
+
+/* ============================================================
    FOOTER
-------------------------- */
+
+============================================================ */
 
 footer {
 
@@ -264,70 +536,73 @@ footer {
     border-top: 1px solid var(--border);
 
     color: var(--muted);
+
+    font-size: .9rem;
 }
 
-/* -------------------------
+
+/* ============================================================
    MOBILE
-------------------------- */
+
+   Everything collapses into a single column.
+
+============================================================ */
+
+@media (max-width: 1100px) {
+
+    .project {
+
+        grid-column: span 6;
+    }
+
+    .project:nth-child(5n) {
+
+        grid-column: span 6;
+    }
+}
+
+
+/* ============================================================
+   SMALL TABLETS + PHONES
+
+============================================================ */
 
 @media (max-width: 800px) {
 
     body {
+
         padding: 1.5rem;
     }
 
+    .works-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+
+        grid-column: auto;
+    }
+
     h1 {
-        font-size: 2.8rem;
+
+        font-size: 3.5rem;
+    }
+
+    .intro {
+
+        font-size: 1.3rem;
     }
 
     .student {
+
         grid-template-columns: 1fr;
     }
 
     .student img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
 
-    .project img {
-        height: 300px;
-    }
-}
+        width: 250px;
 
-.students {
-    max-width: 1000px;
-    margin-top: 3rem;
-}
-
-.student {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 2rem;
-
-    margin-bottom: 4rem;
-
-    align-items: start;
-}
-
-.student img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-.student h3 {
-    margin-top: 0;
-    margin-bottom: .5rem;
-}
-
-@media (max-width: 700px) {
-    .student {
-        grid-template-columns: 1fr;
-    }
-
-    .student img {
-        width: 200px;
-        height: 200px;
+        height: 250px;
     }
 }
