@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("style.css");
-  eleventyConfig.addPassthroughCopy("portrait.jpg");
+  eleventyConfig.addPassthroughCopy("portrait.jpeg");
   eleventyConfig.addPassthroughCopy("writing/*.pdf");
   eleventyConfig.addPassthroughCopy("projects/**/*.{jpg,jpeg,png,gif,webp}");
 
