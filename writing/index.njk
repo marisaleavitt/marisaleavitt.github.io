@@ -1,1 +1,13 @@
+---
+layout: base.njk
+title: Writing
+---
 
+<h2>Selected Writing</h2>
+
+{% for paper in writing %}
+<div class="bib-item">
+<a href="/writing/{{ paper.pdf}}" target="_blank"><strong>{{ paper.title }}</strong> (PDF)</a><br>
+<span class="bib-meta">{{ paper.publication }}, {{ paper.year }}</span>
+</div>
+{% endfor %}
