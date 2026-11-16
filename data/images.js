@@ -1,4 +1,3 @@
-
 const researchImages = [
 
     {
@@ -6,17 +5,13 @@ const researchImages = [
 
         title: "Temporal Imaginaries",
 
-        page: "temporal-imaginaries",
-
         layout: "offset"
     },
 
     {
         src: "images/research/hardwired.jpeg",
 
-        title: "Software Studies",
-
-        page: "software-studies"
+        title: "Software Studies"
     },
 
     {
@@ -24,17 +19,13 @@ const researchImages = [
 
         title: "SLOPE Project",
 
-        page: "slope-project",
-
         layout: "offset-large"
     },
 
     {
         src: "images/research/weaving.jpg",
 
-        title: "Maintenance Studies",
-
-        page: "maintenance-studies"
+        title: "Maintenance Studies"
     }
 
 ];
