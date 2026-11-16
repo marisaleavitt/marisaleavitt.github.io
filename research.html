@@ -1,34 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
 
-/* =======================================================
-   RESEARCH ATLAS
+<head>
 
-   This is the main "Research" page.
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   Unlike a traditional portfolio, the images ARE the
-   navigation.
+<title>Research | Marisa Cohn</title>
 
-   The goal is for the page to feel somewhere between:
+<link rel="stylesheet" href="css/style.css">
 
-   - an archive
-   - a visual notebook
-   - a contact sheet
-   - a wall of research fragments
+<style>
 
-======================================================= */
-
-
-/* =======================================================
-   PAGE TITLE
-
-   Keep this fairly quiet.
-
-   Images should dominate the page.
-
-======================================================= */
+/* ============================================
+   RESEARCH PAGE SPECIFIC STYLES
+============================================ */
 
 .research-title {
-
-    font-family: var(--body);
 
     font-size: .85rem;
 
@@ -40,36 +28,17 @@
 }
 
 
-/* =======================================================
-   MASONRY-STYLE IMAGE LAYOUT
-
-   CSS columns create a Pinterest-like layout
-   without requiring Javascript.
-
-   Browser automatically places each image into
-   the next available column.
-
-======================================================= */
+/* Masonry-style archive */
 
 .research-grid {
 
-    columns: 4 300px;
+    columns: 4 280px;
 
     column-gap: 2rem;
 }
 
 
-/* =======================================================
-   INDIVIDUAL IMAGE LINK
-
-   Each image is inside an anchor tag.
-
-   Example:
-
-   <a class="research-item"
-      href="transit.html">
-
-======================================================= */
+/* Individual image link */
 
 .research-item {
 
@@ -87,13 +56,7 @@
 }
 
 
-/* =======================================================
-   IMAGE ITSELF
-
-   Display:block removes small gaps that
-   browsers otherwise place beneath images.
-
-======================================================= */
+/* Images */
 
 .research-item img {
 
@@ -101,52 +64,27 @@
 
     display: block;
 
-    background: #e5e0d5;
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
 
     filter:
-        saturate(.88)
-        contrast(.96);
-
-    transition:
-        transform .35s ease,
-        opacity .35s ease,
-        filter .35s ease;
+        saturate(.9)
+        contrast(.95);
 }
 
 
-/* =======================================================
-   IMAGE HOVER
-
-   Images become slightly more vivid.
-
-   Kept subtle intentionally.
-
-======================================================= */
+/* Hover effect */
 
 .research-item:hover img {
 
     transform: scale(1.01);
 
-    opacity: .93;
-
-    filter:
-        saturate(1)
-        contrast(1);
+    opacity: .92;
 }
 
 
-/* =======================================================
-   TITLE LABEL
-
-   Hidden until hover.
-
-   Example:
-
-   TRANSIT
-   TERMINAL PATTERNS
-   MAINTENANCE
-
-======================================================= */
+/* Hover label */
 
 .research-item span {
 
@@ -158,9 +96,9 @@
 
     background: rgba(247,244,238,.95);
 
-    padding: .45rem .7rem;
-
     font-size: .8rem;
+
+    padding: .4rem .7rem;
 
     letter-spacing: .1em;
 
@@ -171,165 +109,41 @@
     transition: opacity .25s ease;
 }
 
-
-/* Show title when hovering */
-
 .research-item:hover span {
 
     opacity: 1;
 }
 
 
-/* =======================================================
-   ARCHIVAL OFFSETS
-
-   Adding class="offset"
-
-   Example:
-
-   <a class="research-item offset">
-
-   creates a slight vertical shift.
-
-   This helps avoid a perfect grid.
-
-======================================================= */
+/* Optional archival offsets */
 
 .offset {
 
     margin-top: -3rem;
 }
 
-
-/* Larger displacement */
-
 .offset-large {
 
-    margin-top: -7rem;
+    margin-top: -6rem;
 }
 
 
-/* =======================================================
-   OPTIONAL SHAPE CLASSES
+/* Mobile */
 
-   If images are cropped differently
-   you can force a consistent behaviour.
-
-======================================================= */
-
-.landscape img {
-
-    aspect-ratio: 4 / 3;
-
-    object-fit: cover;
-}
-
-
-.portrait img {
-
-    aspect-ratio: 3 / 4;
-
-    object-fit: cover;
-}
-
-
-.square img {
-
-    aspect-ratio: 1 / 1;
-
-    object-fit: cover;
-}
-
-
-.panorama img {
-
-    aspect-ratio: 16 / 7;
-
-    object-fit: cover;
-}
-
-
-/* =======================================================
-   FEATURED IMAGE
-
-   Gives a little extra visual weight to a
-   particularly important project.
-
-   Example:
-
-   <a class="research-item featured">
-
-======================================================= */
-
-.featured {
-
-    transform: scale(1.02);
-}
-
-
-/* =======================================================
-   SMALL META LABEL
-
-   Optional category label above image.
-
-   Example:
-
-   Workshop
-   Project
-   Exhibition
-
-======================================================= */
-
-.research-meta {
-
-    display: block;
-
-    margin-bottom: .4rem;
-
-    color: var(--muted);
-
-    font-size: .7rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: .14em;
-}
-
-
-/* =======================================================
-   MOBILE
-
-   Reduce number of columns as screen shrinks.
-
-======================================================= */
-
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
 
     .research-grid {
 
-        columns: 3 250px;
-    }
-}
-
-
-@media (max-width: 800px) {
-
-    .research-grid {
-
-        columns: 2 180px;
+        columns: 2 200px;
     }
 
-    .offset {
-
-        margin-top: 0;
-    }
-
+    .offset,
     .offset-large {
 
         margin-top: 0;
     }
-}
 
+}
 
 @media (max-width: 600px) {
 
@@ -348,4 +162,80 @@
 
         margin-top: .5rem;
     }
+
 }
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="research.html">Research</a>
+
+    <a href="writing.html">Writing</a>
+
+    <a href="students.html">Students</a>
+
+    <a href="about.html">About</a>
+
+</nav>
+
+<h1 class="research-title">
+    Research
+</h1>
+
+<section
+    class="research-grid"
+    id="research-grid">
+
+</section>
+
+
+<!-- Data -->
+
+<script src="js/research-data.js"></script>
+
+
+<!-- Page Builder -->
+
+<script>
+
+const grid =
+document.getElementById("research-grid");
+
+
+researchImages.forEach(item => {
+
+    const link =
+    document.createElement("a");
+
+    link.href =
+    "research/" + item.page + ".html";
+
+    link.className =
+    "research-item " + (item.layout || "");
+
+    link.innerHTML = `
+
+        <img
+            src="${item.src}"
+            alt="${item.title}">
+
+        <span>${item.title}</span>
+
+    `;
+
+    grid.appendChild(link);
+
+});
+
+</script>
+
+</body>
+
+</html>
