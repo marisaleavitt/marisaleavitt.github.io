@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: About
+title: Marisa Leavitt Cohn
 ---
 <img src="/portrait.jpeg" alt="Marisa Leavitt Cohn" class="portrait">
 
