@@ -4,7 +4,7 @@
    ====================================================== */
 
 :root {
-  --sidebar-width: 150px;
+  --sidebar-width: 300px;
 
   --font-sans:
     "Avenir Next",
@@ -125,8 +125,8 @@ a:hover {
 
 .content h1 {
   font-family: var(--font-title);
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 34px;
+  font-weight: 200;
   line-height: 1.1;
 
   margin: 0 0 32px 0;
