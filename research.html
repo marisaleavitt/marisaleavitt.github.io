@@ -1,1 +1,351 @@
 
+/* =======================================================
+   RESEARCH ATLAS
+
+   This is the main "Research" page.
+
+   Unlike a traditional portfolio, the images ARE the
+   navigation.
+
+   The goal is for the page to feel somewhere between:
+
+   - an archive
+   - a visual notebook
+   - a contact sheet
+   - a wall of research fragments
+
+======================================================= */
+
+
+/* =======================================================
+   PAGE TITLE
+
+   Keep this fairly quiet.
+
+   Images should dominate the page.
+
+======================================================= */
+
+.research-title {
+
+    font-family: var(--body);
+
+    font-size: .85rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+
+    margin-bottom: 3rem;
+}
+
+
+/* =======================================================
+   MASONRY-STYLE IMAGE LAYOUT
+
+   CSS columns create a Pinterest-like layout
+   without requiring Javascript.
+
+   Browser automatically places each image into
+   the next available column.
+
+======================================================= */
+
+.research-grid {
+
+    columns: 4 300px;
+
+    column-gap: 2rem;
+}
+
+
+/* =======================================================
+   INDIVIDUAL IMAGE LINK
+
+   Each image is inside an anchor tag.
+
+   Example:
+
+   <a class="research-item"
+      href="transit.html">
+
+======================================================= */
+
+.research-item {
+
+    display: block;
+
+    position: relative;
+
+    margin-bottom: 2rem;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    break-inside: avoid;
+}
+
+
+/* =======================================================
+   IMAGE ITSELF
+
+   Display:block removes small gaps that
+   browsers otherwise place beneath images.
+
+======================================================= */
+
+.research-item img {
+
+    width: 100%;
+
+    display: block;
+
+    background: #e5e0d5;
+
+    filter:
+        saturate(.88)
+        contrast(.96);
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease,
+        filter .35s ease;
+}
+
+
+/* =======================================================
+   IMAGE HOVER
+
+   Images become slightly more vivid.
+
+   Kept subtle intentionally.
+
+======================================================= */
+
+.research-item:hover img {
+
+    transform: scale(1.01);
+
+    opacity: .93;
+
+    filter:
+        saturate(1)
+        contrast(1);
+}
+
+
+/* =======================================================
+   TITLE LABEL
+
+   Hidden until hover.
+
+   Example:
+
+   TRANSIT
+   TERMINAL PATTERNS
+   MAINTENANCE
+
+======================================================= */
+
+.research-item span {
+
+    position: absolute;
+
+    left: 1rem;
+
+    bottom: 1rem;
+
+    background: rgba(247,244,238,.95);
+
+    padding: .45rem .7rem;
+
+    font-size: .8rem;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    transition: opacity .25s ease;
+}
+
+
+/* Show title when hovering */
+
+.research-item:hover span {
+
+    opacity: 1;
+}
+
+
+/* =======================================================
+   ARCHIVAL OFFSETS
+
+   Adding class="offset"
+
+   Example:
+
+   <a class="research-item offset">
+
+   creates a slight vertical shift.
+
+   This helps avoid a perfect grid.
+
+======================================================= */
+
+.offset {
+
+    margin-top: -3rem;
+}
+
+
+/* Larger displacement */
+
+.offset-large {
+
+    margin-top: -7rem;
+}
+
+
+/* =======================================================
+   OPTIONAL SHAPE CLASSES
+
+   If images are cropped differently
+   you can force a consistent behaviour.
+
+======================================================= */
+
+.landscape img {
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+
+.portrait img {
+
+    aspect-ratio: 3 / 4;
+
+    object-fit: cover;
+}
+
+
+.square img {
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+}
+
+
+.panorama img {
+
+    aspect-ratio: 16 / 7;
+
+    object-fit: cover;
+}
+
+
+/* =======================================================
+   FEATURED IMAGE
+
+   Gives a little extra visual weight to a
+   particularly important project.
+
+   Example:
+
+   <a class="research-item featured">
+
+======================================================= */
+
+.featured {
+
+    transform: scale(1.02);
+}
+
+
+/* =======================================================
+   SMALL META LABEL
+
+   Optional category label above image.
+
+   Example:
+
+   Workshop
+   Project
+   Exhibition
+
+======================================================= */
+
+.research-meta {
+
+    display: block;
+
+    margin-bottom: .4rem;
+
+    color: var(--muted);
+
+    font-size: .7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .14em;
+}
+
+
+/* =======================================================
+   MOBILE
+
+   Reduce number of columns as screen shrinks.
+
+======================================================= */
+
+@media (max-width: 1200px) {
+
+    .research-grid {
+
+        columns: 3 250px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .research-grid {
+
+        columns: 2 180px;
+    }
+
+    .offset {
+
+        margin-top: 0;
+    }
+
+    .offset-large {
+
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .research-grid {
+
+        columns: 1;
+    }
+
+    .research-item span {
+
+        opacity: 1;
+
+        position: static;
+
+        display: inline-block;
+
+        margin-top: .5rem;
+    }
+}
