@@ -3,4 +3,16 @@ layout: base.njk
 title: Writing
 ---
 
-<pre>{{ writing | dump }}</pre>
+<h2>Selected Writing</h2>
+
+{% for paper in writing %}
+  <div class="bib-item">
+    <a href="/writing/{{ paper.pdf }}" target="_blank">
+      <strong>{{ paper.title }}</strong>
+    </a>
+
+    <div class="bib-meta">
+      {{ paper.publication }}, {{ paper.year }}
+    </div>
+  </div>
+{% endfor %}
