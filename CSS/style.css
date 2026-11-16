@@ -256,37 +256,61 @@ p {
 }
 
 
-/* =====================================================
-   RESEARCH PAGE
+/* ===================================================
+   RESEARCH ATLAS
 
-   Heart of the website.
+   A loose patchwork of images.
 
-   Images become navigation.
+   Less "grid"
 
-===================================================== */
+   More:
+   - archive
+   - pinboard
+   - notebook
+   - tabletop
+
+=================================================== */
+
 
 .research-grid {
 
-    columns: 4 250px;
+    display: flex;
 
-    column-gap: 2rem;
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    margin-top: 3rem;
 }
 
 
-/* =====================================================
-   EACH IMAGE
+/* -----------------------------------------
+   INDIVIDUAL IMAGE
 
-===================================================== */
+----------------------------------------- */
 
 .research-item {
 
+    position: relative;
+
     display: block;
 
-    margin-bottom: 2rem;
+    text-decoration: none;
 
-    break-inside: avoid;
+    color: inherit;
+
+    transition:
+        transform .25s ease,
+        z-index .25s ease;
 }
 
+
+/* -----------------------------------------
+   IMAGE
+
+----------------------------------------- */
 
 .research-item img {
 
@@ -294,41 +318,51 @@ p {
 
     display: block;
 
-    transition:
-        transform .3s ease,
-        opacity .3s ease;
+    border: 1px solid rgba(0,0,0,.06);
+
+    background: #ebe6dc;
 
     filter:
-        saturate(.85)
-        contrast(.95);
+        saturate(.92)
+        contrast(.96);
+
+    transition:
+        opacity .25s ease,
+        filter .25s ease;
 }
 
 
-/* =====================================================
+/* -----------------------------------------
+   LABEL
+
+----------------------------------------- */
+
+.research-item span {
+
+    display: none;
+}
+
+
+/* -----------------------------------------
    HOVER
 
-===================================================== */
+----------------------------------------- */
+
+.research-item:hover {
+
+    z-index: 100;
+
+    transform: scale(1.03);
+}
+
 
 .research-item:hover img {
 
-    transform: scale(1.01);
+    filter:
+        saturate(1)
+        contrast(1);
 
-    opacity: .9;
-}
-
-
-/* =====================================================
-   OPTIONAL OVERLAP EFFECT
-
-   Add class="offset"
-
-   Makes the page feel less grid-like.
-
-===================================================== */
-
-.offset {
-
-    margin-top: -3rem;
+    opacity: .96;
 }
 
 
