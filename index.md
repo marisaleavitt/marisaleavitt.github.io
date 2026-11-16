@@ -2,7 +2,7 @@
 layout: base.njk
 title: About
 ---
-<img src="/portrait.jpg" alt="Marisa Leavitt Cohn" class="portrait">
+<img src="/portrait.jpeg" alt="Marisa Leavitt Cohn" class="portrait">
 
 My bio
 
