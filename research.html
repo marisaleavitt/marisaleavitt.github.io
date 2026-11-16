@@ -4,7 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Research | Marisa Cohn</title>
 
@@ -13,7 +15,13 @@
 <style>
 
 /* ============================================
-   RESEARCH PAGE SPECIFIC STYLES
+   RESEARCH ATLAS
+
+   Images are the navigation.
+
+   The page is generated automatically from
+   data/images.js.
+
 ============================================ */
 
 .research-title {
@@ -28,7 +36,9 @@
 }
 
 
-/* Masonry-style archive */
+/* -----------------------------------------
+   MASONRY LAYOUT
+----------------------------------------- */
 
 .research-grid {
 
@@ -38,7 +48,9 @@
 }
 
 
-/* Individual image link */
+/* -----------------------------------------
+   INDIVIDUAL IMAGE
+----------------------------------------- */
 
 .research-item {
 
@@ -46,17 +58,19 @@
 
     position: relative;
 
+    break-inside: avoid;
+
     margin-bottom: 2rem;
 
     text-decoration: none;
 
     color: inherit;
-
-    break-inside: avoid;
 }
 
 
-/* Images */
+/* -----------------------------------------
+   IMAGE
+----------------------------------------- */
 
 .research-item img {
 
@@ -64,17 +78,19 @@
 
     display: block;
 
-    transition:
-        transform .3s ease,
-        opacity .3s ease;
-
     filter:
         saturate(.9)
         contrast(.95);
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
 }
 
 
-/* Hover effect */
+/* -----------------------------------------
+   HOVER EFFECT
+----------------------------------------- */
 
 .research-item:hover img {
 
@@ -84,7 +100,9 @@
 }
 
 
-/* Hover label */
+/* -----------------------------------------
+   LABEL
+----------------------------------------- */
 
 .research-item span {
 
@@ -96,9 +114,9 @@
 
     background: rgba(247,244,238,.95);
 
-    font-size: .8rem;
+    padding: .45rem .7rem;
 
-    padding: .4rem .7rem;
+    font-size: .8rem;
 
     letter-spacing: .1em;
 
@@ -115,7 +133,9 @@
 }
 
 
-/* Optional archival offsets */
+/* -----------------------------------------
+   OPTIONAL OFFSETS
+----------------------------------------- */
 
 .offset {
 
@@ -128,7 +148,9 @@
 }
 
 
-/* Mobile */
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
 
 @media (max-width: 900px) {
 
@@ -142,7 +164,6 @@
 
         margin-top: 0;
     }
-
 }
 
 @media (max-width: 600px) {
@@ -162,7 +183,6 @@
 
         margin-top: .5rem;
     }
-
 }
 
 </style>
@@ -185,23 +205,33 @@
 
 </nav>
 
+
 <h1 class="research-title">
     Research
 </h1>
 
+
+<!-- ==================================
+     GENERATED IMAGE ATLAS
+=================================== -->
+
 <section
-    class="research-grid"
-    id="research-grid">
+    id="research-grid"
+    class="research-grid">
 
 </section>
 
 
-<!-- Data -->
+<!-- ==================================
+     LOAD IMAGE DATA
+=================================== -->
 
-<script src="js/research-data.js"></script>
+<script src="data/images.js"></script>
 
 
-<!-- Page Builder -->
+<!-- ==================================
+     BUILD PAGE
+=================================== -->
 
 <script>
 
@@ -211,16 +241,16 @@ document.getElementById("research-grid");
 
 researchImages.forEach(item => {
 
-    const link =
+    const card =
     document.createElement("a");
 
-    link.href =
-    "research/" + item.page + ".html";
+    card.href =
+        "research/" + item.page + ".html";
 
-    link.className =
-    "research-item " + (item.layout || "");
+    card.className =
+        "research-item " + (item.layout || "");
 
-    link.innerHTML = `
+    card.innerHTML = `
 
         <img
             src="${item.src}"
@@ -230,7 +260,7 @@ researchImages.forEach(item => {
 
     `;
 
-    grid.appendChild(link);
+    grid.appendChild(card);
 
 });
 
