@@ -4,7 +4,7 @@ title: About
 ---
 <img src="/portrait.jpeg" alt="Marisa Leavitt Cohn" class="portrait">
 
-My bio
+I am adding a bunch of information about me. 
 
 **Contact**
 marisa@itu.dk
