@@ -7,7 +7,14 @@ title: Writing
 
 {% for paper in writing %}
 <div class="bib-item">
-<a href="/writing/{{ paper.pdf}}" target="_blank"><strong>{{ paper.title }}</strong> (PDF)</a><br>
-<span class="bib-meta">{{ paper.publication }}, {{ paper.year }}</span>
+
+  <a href="/writing/{{ paper.pdf }}" target="_blank">
+    <strong>{{ paper.title }}</strong>
+  </a>
+
+  <div class="bib-meta">
+    {{ paper.publication }}, {{ paper.year }}
+  </div>
+
 </div>
 {% endfor %}
