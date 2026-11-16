@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Research | Marisa Cohn</title>
 
@@ -16,12 +15,6 @@
 
 /* ============================================
    RESEARCH ATLAS
-
-   Images are the navigation.
-
-   The page is generated automatically from
-   data/images.js.
-
 ============================================ */
 
 .research-title {
@@ -36,9 +29,9 @@
 }
 
 
-/* -----------------------------------------
+/* ============================================
    MASONRY LAYOUT
------------------------------------------ */
+============================================ */
 
 .research-grid {
 
@@ -48,9 +41,9 @@
 }
 
 
-/* -----------------------------------------
-   INDIVIDUAL IMAGE
------------------------------------------ */
+/* ============================================
+   IMAGE AS NAVIGATION
+============================================ */
 
 .research-item {
 
@@ -58,19 +51,19 @@
 
     position: relative;
 
-    break-inside: avoid;
-
     margin-bottom: 2rem;
 
     text-decoration: none;
 
     color: inherit;
+
+    break-inside: avoid;
 }
 
 
-/* -----------------------------------------
+/* ============================================
    IMAGE
------------------------------------------ */
+============================================ */
 
 .research-item img {
 
@@ -78,19 +71,17 @@
 
     display: block;
 
+    background: #e7e2d7;
+
     filter:
         saturate(.9)
-        contrast(.95);
+        contrast(.96);
 
     transition:
         transform .3s ease,
         opacity .3s ease;
 }
 
-
-/* -----------------------------------------
-   HOVER EFFECT
------------------------------------------ */
 
 .research-item:hover img {
 
@@ -100,9 +91,9 @@
 }
 
 
-/* -----------------------------------------
-   LABEL
------------------------------------------ */
+/* ============================================
+   TITLE APPEARS ON HOVER
+============================================ */
 
 .research-item span {
 
@@ -112,15 +103,15 @@
 
     bottom: 1rem;
 
-    background: rgba(247,244,238,.95);
+    background: rgba(247,244,238,.96);
 
     padding: .45rem .7rem;
 
     font-size: .8rem;
 
-    letter-spacing: .1em;
-
     text-transform: uppercase;
+
+    letter-spacing: .1em;
 
     opacity: 0;
 
@@ -133,9 +124,9 @@
 }
 
 
-/* -----------------------------------------
+/* ============================================
    OPTIONAL OFFSETS
------------------------------------------ */
+============================================ */
 
 .offset {
 
@@ -148,9 +139,9 @@
 }
 
 
-/* -----------------------------------------
+/* ============================================
    MOBILE
------------------------------------------ */
+============================================ */
 
 @media (max-width: 900px) {
 
@@ -205,34 +196,19 @@
 
 </nav>
 
-
-<h1 class="research-title">
-    Research
-</h1>
-
-
-<!-- ==================================
-     GENERATED IMAGE ATLAS
-=================================== -->
+<h1 class="research-title">Research</h1>
 
 <section
     id="research-grid"
     class="research-grid">
-
 </section>
 
 
-<!-- ==================================
-     LOAD IMAGE DATA
-=================================== -->
-
+<!-- Load Atlas Data -->
 <script src="data/images.js"></script>
 
 
-<!-- ==================================
-     BUILD PAGE
-=================================== -->
-
+<!-- Build Atlas -->
 <script>
 
 const grid =
@@ -241,16 +217,16 @@ document.getElementById("research-grid");
 
 researchImages.forEach(item => {
 
-    const card =
+    const imageLink =
     document.createElement("a");
 
-    card.href =
-        "research/" + item.page + ".html";
+    imageLink.href =
+        "coming-soon.html";
 
-    card.className =
+    imageLink.className =
         "research-item " + (item.layout || "");
 
-    card.innerHTML = `
+    imageLink.innerHTML = `
 
         <img
             src="${item.src}"
@@ -260,7 +236,7 @@ researchImages.forEach(item => {
 
     `;
 
-    grid.appendChild(card);
+    grid.appendChild(imageLink);
 
 });
 
