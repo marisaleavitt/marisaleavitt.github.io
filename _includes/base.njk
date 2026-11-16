@@ -1,16 +1,48 @@
-<nav class="sidebar">
-  <ul>
-    <li><a href="/">About</a></li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or "Marisa Leavitt Cohn" }}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav class="sidebar">
+    <h1><a href="/">Marisa Leavitt Cohn</a></h1>
+    
+    <div class="nav-group">
+     
+      <ul>
+        {% for project in collections.projects %}
+          <li>
+            <a href="{{ project.url }}" {% if page.url == project.url %}class="active"{% endif %}>
+              {{ project.data.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
 
-    {% for project in collections.projects %}
-      <li>
-        <a href="{{ project.url }}">
-          {{ project.data.title }}
-        </a>
-      </li>
-    {% endfor %}
+    <div class="nav-group">
+      <ul>
+        <li><a href="/writing/" {% if page.url == "/writing/" %}class="active"{% endif %}>Writing</a></li>
+        <li><a href="/teaching/" {% if page.url == "/teaching/" %}class="active"{% endif %}>Students</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <li><a href="/writing/">Writing</a></li>
-    <li><a href="/teaching/">Students</a></li>
-  </ul>
-</nav>
+  <main class="content">
+    {{ content | safe }}
+
+    {# Automatically render all images if this is a project page #}
+    {% if tags == "project" %}
+      <div class="gallery">
+        {% set images = page.inputPath | getProjectImages %}
+        {% for img in images %}
+          <img src="{{ img }}" alt="{{ title }}" loading="lazy">
+        {% endfor %}
+      </div>
+    {% endif %}
+  </main>
+</body>
+</html>
