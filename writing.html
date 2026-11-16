@@ -1,1 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Writing | Marisa Cohn</title>
+
+<style>
+
+/* =====================================================
+   WRITING PAGE
+
+   A text-oriented counterpart to the image-heavy
+   Research section.
+
+   The design resembles a publication list with
+   visual traces rather than a portfolio.
+
+===================================================== */
+
+
+/* =====================================================
+   FONTS
+
+===================================================== */
+
+@import url('https://fonts.cdnfonts.com/css/avenir');
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
+
+
+/* =====================================================
+   VARIABLES
+
+===================================================== */
+
+:root {
+
+    --bg: #f7f4ee;
+
+    --text: #111111;
+
+    --muted: #777777;
+
+    --border: #ddd8cf;
+
+    --heading: "KaTeX_Main", serif;
+
+    --body: "Avenir", sans-serif;
+}
+
+
+/* =====================================================
+   RESET
+
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PAGE
+
+===================================================== */
+
+body {
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-family: var(--body);
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 3rem;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   NAVIGATION
+
+===================================================== */
+
+nav {
+
+    display: flex;
+
+    gap: 2rem;
+
+    margin-bottom: 5rem;
+
+    font-size: .8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .15em;
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition: opacity .2s ease;
+}
+
+
+nav a:hover {
+
+    opacity: .5;
+}
+
+
+/* =====================================================
+   PAGE TITLE
+
+===================================================== */
+
+h1 {
+
+    font-family: var(--heading);
+
+    font-weight: normal;
+
+    font-size: clamp(2rem,4vw,4rem);
+
+    margin-bottom: 4rem;
+}
+
+
+/* =====================================================
+   SECTION HEADINGS
+
+===================================================== */
+
+h2 {
+
+    font-family: var(--heading);
+
+    font-weight: normal;
+
+    font-size: 1.8rem;
+
+    margin-top: 4rem;
+
+    margin-bottom: 2rem;
+}
+
+
+/* =====================================================
+   WRITING ENTRY
+
+   Two columns:
+
+   LEFT = text
+   RIGHT = image
+
+===================================================== */
+
+.writing-item {
+
+    display: grid;
+
+    grid-template-columns: 1fr 180px;
+
+    gap: 3rem;
+
+    margin-bottom: 4rem;
+
+    padding-bottom: 2rem;
+
+    border-bottom: 1px solid var(--border);
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   TITLE
+
+===================================================== */
+
+.writing-title {
+
+    font-family: var(--heading);
+
+    font-size: 1.4rem;
+
+    line-height: 1.2;
+
+    margin-bottom: .75rem;
+}
+
+
+/* =====================================================
+   CITATION
+
+===================================================== */
+
+.citation {
+
+    color: var(--muted);
+
+    font-size: .9rem;
+
+    margin-bottom: 1rem;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+
+===================================================== */
+
+.description {
+
+    max-width: 60ch;
+}
+
+
+/* =====================================================
+   THUMBNAIL
+
+===================================================== */
+
+.writing-image {
+
+    width: 100%;
+
+    display: block;
+
+    filter:
+        saturate(.9)
+        contrast(.98);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease;
+}
+
+
+.writing-image:hover {
+
+    opacity: .9;
+
+    transform: scale(1.02);
+}
+
+
+/* =====================================================
+   OPTIONAL LINKS
+
+===================================================== */
+
+.links {
+
+    margin-top: 1rem;
+
+    font-size: .9rem;
+}
+
+
+.links a {
+
+    color: inherit;
+}
+
+
+.links a:hover {
+
+    opacity: .6;
+}
+
+
+/* =====================================================
+   MOBILE
+
+===================================================== */
+
+@media (max-width: 800px) {
+
+    body {
+
+        padding: 1.5rem;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        gap: 1rem;
+    }
+
+    .writing-item {
+
+        grid-template-columns: 1fr;
+    }
+
+    .writing-image {
+
+        max-width: 250px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="research.html">Research</a>
+
+    <a href="writing.html">Writing</a>
+
+    <a href="students.html">Students</a>
+
+    <a href="about.html">About</a>
+
+</nav>
+
+
+
+<main>
+
+    <h1>Writing</h1>
+
+
+
+    <!-- =========================
+         JOURNAL ARTICLES
+    ========================== -->
+
+    <h2>Journal Articles</h2>
+
+
+
+    <article class="writing-item">
+
+        <div>
+
+            <div class="writing-title">
+
+                Journal article
+
+            </div>
+
+            <div class="citation">
+
+                Journal Name, 2026
+
+            </div>
+
+            <div class="description">
+
+                description
+
+            </div>
+
+            <div class="links">
+
+                <a href="#">PDF</a>
+
+            </div>
+
+        </div>
+
+        <img
+            class="writing-image"
+            src="images/writing/article1.jpg"
+            alt="Publication thumbnail">
+
+    </article>
+
+
+
+    <article class="writing-item">
+
+        <div>
+
+            <div class="writing-title">
+
+                title 2
+
+            </div>
+
+            <div class="citation">
+
+                venue, 2025
+
+            </div>
+
+            <div class="description">
+
+                description
+
+            </div>
+
+            <div class="links">
+
+                <a href="#">PDF</a>
+
+            </div>
+
+        </div>
+
+        <img
+            class="writing-image"
+            src="images/writing/article2.jpg"
+            alt="Publication thumbnail">
+
+    </article>
+
+
+
+    <!-- =========================
+         BOOK CHAPTERS
+    ========================== -->
+
+    <h2>Book Chapters</h2>
+
+
+
+    <article class="writing-item">
+
+        <div>
+
+            <div class="writing-title">
+
+                example 
+
+            </div>
+
+            <div class="citation">
+
+                In Book Title
+
+            </div>
+
+            <div class="description">
+
+                descriptoin
+
+            </div>
+
+        </div>
+
+        <img
+            class="writing-image"
+            src="images/writing/chapter1.jpg"
+            alt="Book chapter thumbnail">
+
+    </article>
+
+
+
+    <!-- =========================
+         TALKS + KEYNOTES
+    ========================== -->
+
+    <h2>Selected Talks & Keynotes</h2>
+
+
+
+    <article class="writing-item">
+
+        <div>
+
+            <div class="writing-title">
+
+                Terminal Patterns
+
+            </div>
+
+            <div class="citation">
+
+                Post Design Festival, year
+
+            </div>
+
+            <div class="description">
+
+                Keynote and workshop exploring visual, narrative,
+                and collective imaginings of endings.
+
+            </div>
+
+        </div>
+
+        <img
+            class="writing-image"
+            src="images/writing/keynote1.jpg"
+            alt="Keynote thumbnail">
+
+    </article>
+
+
+
+</main>
+
+</body>
+
+</html>
