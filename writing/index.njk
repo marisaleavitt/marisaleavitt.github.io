@@ -3,18 +3,8 @@ layout: base.njk
 title: Writing
 ---
 
-<h2>Selected Writing</h2>
+<h1>Writing</h1>
 
-{% for paper in writing %}
-<div class="bib-item">
+<p>Number of items: {{ writing.length }}</p>
 
-  <a href="/writing/{{ paper.pdf }}" target="_blank">
-    <strong>{{ paper.title }}</strong>
-  </a>
-
-  <div class="bib-meta">
-    {{ paper.publication }}, {{ paper.year }}
-  </div>
-
-</div>
-{% endfor %}
+<pre>{{ writing | dump }}</pre>
