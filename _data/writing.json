@@ -1,14 +1,213 @@
 [
   {
+    "title": "Designing the dash in Human–AI Collaboration: A Redesign Probe for Working with Tensions in Care Documentation Practices",
+    "year": 2026,
+    "publication": "NordiCHI",
+    "url": "https://dl.acm.org/doi/10.1145/3829807.3829909"
+  },
+  {
+    "title": "The Human Instructor Is Gone - What If We Cast GenAI for the Role?",
+    "year": 2026,
+    "publication": "NordiCHI",
+    "url": "https://dl.acm.org/doi/10.1145/3829807.3829907"
+  },
+  {
+    "title": "Reflections on the Shifting Experiences of Scientific Infrastructure",
+    "year": 2026,
+    "publication": "Computing in Science & Engineering",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11599944/"
+  },
+  {
+    "title": "Planning for Long-Lived Missions",
+    "year": 2025,
+    "publication": "Triton and Pluto",
+    "url": "http://dx.doi.org/10.1088/2514-3433/ad5278ch11"
+  },
+  {
+    "title": "Nordic Perspectives on Algorithmic Systems: Cards as a Playful Intervention into the Crisis of Imagination",
+    "year": 2025,
+    "publication": "Computing X Crisis",
+    "url": "https://dl.acm.org/doi/10.1145/3744169.3744190"
+  },
+  {
+    "title": "Introducing The User Experience Department",
+    "year": 2025,
+    "publication": "Computing in Science & Engineering",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11318061/"
+  },
+  {
+    "title": "Exploring Programming in Higher Education",
+    "year": 2025,
+    "publication": "Higher Education Research",
+    "url": "https://pure.itu.dk/ws/portalfiles/portal/114811098/PhD_Thesis_Final_Version_Sebastian_Mateos_Nicolajsen.pdf"
+  },
+  {
+    "title": "Knotting data as a feminist approach to data materialization",
+    "year": 2024,
+    "publication": "Design Research Society",
+    "url": "http://dx.doi.org/10.21606/drs.2024.879"
+  },
+  {
+    "title": "Spaceships and Poetry: Enlivening the Lab as a Site of Feminist Critical Pedagogy",
+    "year": 2024,
+    "publication": "Engaging Science, Technology, and Society",
+    "url": "https://estsjournal.org/index.php/ests/article/view/1915"
+  },
+  {
     "title": "The crone and the hydra: Figuring temporal relations to aging code",
     "year": 2024,
     "publication": "Journal of Aging Studies",
     "url": "https://www.sciencedirect.com/science/article/pii/S0890406524000495"
   },
   {
+    "title": "Workshopping Troubles: Towards Feminist Digital Methods",
+    "year": 2023,
+    "publication": "Australian Feminist Studies",
+    "url": "http://dx.doi.org/10.1080/08164649.2024.2321576"
+  },
+  {
     "title": "Software Maintenance as Materialization of Common Knowledge",
     "year": 2023,
     "publication": "Engaging Science, Technology, and Society",
     "url": "https://estsjournal.org/index.php/ests/article/view/1325"
-  }
-]
+  },
+  {
+    "title": "Fertile Becoming: Reproductive Temporalities with/in Tracking Technologies",
+    "year": 2023,
+    "publication": "FemTech",
+    "url": "https://link.springer.com/10.1007/978-981-99-5605-0_4"
+  },
+  {
+    "title": "Walking Through Normativities of Reproductive Bodies: A Method for Critical Analysis of Tracking Applications",
+    "year": 2023,
+    "publication": "CHI",
+    "url": "https://dl.acm.org/doi/10.1145/3544548.3581450"
+  },
+  {
+    "title": "Another Rant About Technology",
+    "year": 2023,
+    "publication": "Torn Many Ways",
+    "url": "http://dx.doi.org/10.1007/978-3-031-31642-5_5"
+  },
+  {
+    "title": "Speculative Data Work & Dashboards: Designing Alternative Data Visions",
+    "year": 2021,
+    "publication": "PACM HCI",
+    "url": "http://dx.doi.org/10.1145/3434173"
+  },
+  {
+    "title": "Writing Bodies and Bodies of Text: Thinking Vulnerability Through Monsters",
+    "year": 2021,
+    "publication": "Gender, Work & Organization",
+    "url": "http://dx.doi.org/10.1111/gwao.12782"
+  },
+  {
+    "title": "Hot Air and Corporate Sociotechnical Imaginaries",
+    "year": 2021,
+    "publication": "New Media & Society",
+    "url": "http://journals.sagepub.com/doi/10.1177/1461444820929319"
+  },
+  {
+    "title": "Unruly Bodies of Code in Time",
+    "year": 2021,
+    "publication": "Media Infrastructures and the Politics of Digital Time",
+    "url": ""
+  },
+  {
+    "title": "Thinking Problematically as a Resource for AI Design in Politicised Contexts",
+    "year": 2021,
+    "publication": "CHItaly",
+    "url": "https://dl.acm.org/doi/10.1145/3464385.3464738"
+  },
+  {
+    "title": "Pull Request Governance in Open Source Communities",
+    "year": 2021,
+    "publication": "IEEE Transactions on Software Engineering",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9616408/"
+  },
+  {
+    "title": "Caring and Commoning as Cooperative Work",
+    "year": 2021,
+    "publication": "PACM HCI",
+    "url": "https://dl.acm.org/doi/10.1145/3449200"
+  },
+  {
+    "title": "Upon Not Opening The Black Box",
+    "year": 2020,
+    "publication": "CHI Extended Abstracts",
+    "url": "http://dx.doi.org/10.1145/3334480.3381813"
+  },
+  {
+    "title": "Keeping Software Present: Software as a Timely Object for STS Studies of the Digital",
+    "year": 2019,
+    "publication": "digitalSTS",
+    "url": "https://princetonup.degruyter.com/view/title/562276"
+  },
+  {
+    "title": "Why Does Code Review Work for Open Source Software Communities?",
+    "year": 2019,
+    "publication": "ICSE",
+    "url": "http://dx.doi.org/10.1109/icse.2019.00111"
+  },
+  {
+    "title": "A Bestiary of Digital Monsters",
+    "year": 2018,
+    "publication": "Living with Monsters?",
+    "url": "http://dx.doi.org/10.1007/978-3-030-04091-8_13"
+  },
+  {
+    "title": "Lifetime Issues: Temporal Relations of Design and Maintenance",
+    "year": 2017,
+    "publication": "continent.",
+    "url": "https://pure.itu.dk/ws/files/83025779/272_cohn_lifetime_issues_temporal_relations_of_design_and_maintenance.pdf"
+  },
+  {
+    "title": "Maintaining Technological Worlds: Care and its Ambivalences",
+    "year": 2017,
+    "publication": "EASST Review",
+    "url": "https://scholar.google.com/scholar?cluster=10884775233872684297&hl=en&oi=scholarr"
+  },
+  {
+    "title": "Convivial Decay: Entangled Lifetimes in a Geriatric Infrastructure",
+    "year": 2016,
+    "publication": "CSCW",
+    "url": "https://dl.acm.org/doi/10.1145/2818048.2820077"
+  },
+  {
+    "title": "Things Fall Apart: Unpacking the Temporalities of Impermanence for HCI",
+    "year": 2016,
+    "publication": "NordiCHI",
+    "url": "http://dx.doi.org/10.1145/2971485.2987680"
+  },
+  {
+    "title": "Shifting Borderland of Technoscience",
+    "year": 2015,
+    "publication": "Aarhus Series on Human Centered Computing",
+    "url": "http://dx.doi.org/10.7146/aahcc.v1i1.21471"
+  },
+  {
+    "title": "Dynamic Reconfiguration in Planetary Exploration",
+    "year": 2014,
+    "publication": "MIS Quarterly",
+    "url": "http://dx.doi.org/10.25300/misq/2014/38.3.09"
+  },
+  {
+    "title": "How Categories Come to Matter",
+    "year": 2013,
+    "publication": "CHI",
+    "url": "http://dx.doi.org/10.1145/2470654.2466455"
+  },
+  {
+    "title": "Design Methods as Discourse on Practice",
+    "year": 2010,
+    "publication": "GROUP",
+    "url": "http://dx.doi.org/10.1145/1880071.1880079"
+  },
+  {
+    "title": "The Work of Software Development as an Assemblage of Computational Practice",
+    "year": 2009,
+    "publication": "CHASE",
+    "url": "http://dx.doi.org/10.1109/chase.2009.5071419"
+  },
+  {
+    "title":
