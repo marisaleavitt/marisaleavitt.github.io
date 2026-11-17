@@ -1,22 +1,14 @@
----
-layout: base.njk
-title: Writing
----
-
-<h1>Writing</h1>
-
-{% for paper in writing | reverse %}
-
-<div class="bib-item">
-
-  <a href="{{ paper.url }}" target="_blank">
-    <strong>{{ paper.title }}</strong>
-  </a>
-
-  <div class="bib-meta">
-    {{ paper.publication }}, {{ paper.year }}
-  </div>
-
-</div>
-
-{% endfor %}
+[
+  {
+    "title": "The crone and the hydra: Figuring temporal relations to aging code",
+    "year": 2024,
+    "publication": "Journal of Aging Studies",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0890406524000495"
+  },
+  {
+    "title": "Software Maintenance as Materialization of Common Knowledge",
+    "year": 2023,
+    "publication": "Engaging Science, Technology, and Society",
+    "url": "https://estsjournal.org/index.php/ests/article/view/1325"
+  }
+]
