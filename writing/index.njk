@@ -5,6 +5,18 @@ title: Writing
 
 <h1>Writing</h1>
 
-<p>Number of items: {{ writing.length }}</p>
+{% for paper in writing %}
 
-<pre>{{ writing | dump }}</pre>
+<div class="bib-item">
+
+  <a href="{{ paper.url }}" target="_blank">
+    <strong>{{ paper.title }}</strong>
+  </a>
+
+  <div class="bib-meta">
+    {{ paper.publication }}, {{ paper.year }}
+  </div>
+
+</div>
+
+{% endfor %}
