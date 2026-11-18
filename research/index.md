@@ -3,10 +3,12 @@ layout: base.njk
 title: Research
 ---
 
-{% for item in collections.all %}
-URL: {{ item.url }}
-TITLE: {{ item.data.title }}
+# Research
 
-<hr>
+{% for item in collections.research %}
+
+### <a href="{{ item.url }}">{{ item.data.title }}</a>
+
+{{ item.data.summary }}
 
 {% endfor %}
