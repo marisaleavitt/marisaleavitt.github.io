@@ -13,6 +13,8 @@ title: Research
     <h3>
       <a href="{{ item.url }}">{{ item.data.title }}</a>
     </h3>
+    
+    <p>{{ item.inputPath }}</p>
 
     <p>{{ item.data.summary }}</p>
 
