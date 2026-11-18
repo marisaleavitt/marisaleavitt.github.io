@@ -12,6 +12,8 @@ title: Research
 
   {% set navImage = item.inputPath | getNavImage %}
 
+{% assign navImage = item.inputPath | getNavImage %}
+
 {% if navImage %}
   <a href="{{ item.url }}">
     <img src="{{ navImage }}" alt="{{ item.data.title }}">
