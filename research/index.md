@@ -3,4 +3,4 @@ layout: base.njk
 title: Research
 ---
 
-Research collection size: {{ collections.research.length }}
+Number of pages in all collection: {{ collections.all.length }}
