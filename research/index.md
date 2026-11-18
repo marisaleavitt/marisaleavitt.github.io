@@ -3,14 +3,10 @@ layout: base.njk
 title: Research
 ---
 
-# Research
-
 {% for item in collections.all %}
-  {% if item.url != "/research/" and item.url startsWith "/research/" %}
+URL: {{ item.url }}
+TITLE: {{ item.data.title }}
 
-### <a href="{{ item.url }}">{{ item.data.title }}</a>
+<hr>
 
-{{ item.data.summary }}
-
-  {% endif %}
 {% endfor %}
