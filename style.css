@@ -118,6 +118,16 @@ a:hover {
 
   max-width: 900px;
 }
+.research-card {
+  margin-bottom: 3rem;
+}
+
+.research-card img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin-bottom: 1rem;
+}
 
 /* ======================================================
    HOME PAGE
