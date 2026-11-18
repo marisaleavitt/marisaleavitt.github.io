@@ -5,12 +5,14 @@ title: Research
 
 # Research
 
-{% for item in collections.all %}
-  {% if item.url != "/research/" and item.url startsWith "/research/" %}
+{% for item in collections.research %}
+
+  {% if item.url != "/research/" %}
 
 ### <a href="{{ item.url }}">{{ item.data.title }}</a>
 
 {{ item.data.summary }}
 
   {% endif %}
+
 {% endfor %}
