@@ -10,9 +10,9 @@ title: Research
 
   <div class="research-card">
 
-    {% if item.data.title == "SLOPE" %}
+    {% if item.data.navImage %}
       <a href="{{ item.url }}">
-        <img src="/research/SLOPE/nav.png" alt="SLOPE">
+        <img src="{{ item.data.navImage }}" alt="{{ item.data.title }}">
       </a>
     {% endif %}
 
