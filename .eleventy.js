@@ -32,6 +32,24 @@ module.exports = function(eleventyConfig) {
       .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
       .sort();
   });
+  eleventyConfig.addFilter("getNavImage", function(inputPath) {
+  const dir = path.dirname(inputPath);
+
+  const candidates = [
+    "nav.jpg",
+    "nav.jpeg",
+    "nav.png",
+    "nav.webp"
+  ];
+
+  for (const file of candidates) {
+    if (fs.existsSync(path.join(dir, file))) {
+      return "/" + path.join(dir, file).replace(/\\/g, "/");
+    }
+  }
+
+  return null;
+});
 
   return {
     dir: {
