@@ -3,8 +3,14 @@ layout: base.njk
 title: Research
 ---
 
-Found {{ collections.research.length }} research pages.
+# Research
 
 {% for item in collections.research %}
-- {{ item.url }}
+  {% if item.url != "/research/" %}
+
+### <a href="{{ item.url }}">{{ item.data.title }}</a>
+
+{{ item.data.summary }}
+
+  {% endif %}
 {% endfor %}
