@@ -122,17 +122,16 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
+.research-card {
+  margin-bottom: 2.5rem;
+}
+
 .research-card img {
   width: 260px;
   height: 180px;
   object-fit: cover;
   display: block;
   margin-bottom: 0.75rem;
-}
-.research-layout {
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
 }
 
 .research-nav {
