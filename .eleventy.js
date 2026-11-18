@@ -14,7 +14,7 @@ module.exports = function(eleventyConfig) {
       .getFilteredByGlob("projects/*/index.{md,txt}")
       .sort((a, b) => {
         return a.inputPath.localeCompare(b.inputPath);
-
+});
   eleventyConfig.addCollection("research", function(collectionApi) {
   return collectionApi
     .getFilteredByGlob("research/**/index.md")
