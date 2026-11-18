@@ -10,11 +10,13 @@ title: Research
 
   <div class="research-card">
 
-    {% if item.data.navImage %}
-      <a href="{{ item.url }}">
-        <img src="{{ item.data.navImage }}" alt="{{ item.data.title }}">
-      </a>
-    {% endif %}
+  {% set navImage = item.inputPath | getNavImage %}
+
+{% if navImage %}
+  <a href="{{ item.url }}">
+    <img src="{{ navImage }}" alt="{{ item.data.title }}">
+  </a>
+{% endif %}
 
     <h3>
       <a href="{{ item.url }}">{{ item.data.title }}</a>
