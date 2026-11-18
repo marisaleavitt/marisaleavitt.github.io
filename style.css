@@ -151,6 +151,23 @@ a:hover {
   text-decoration: none;
 }
 
+.research-layout {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 3rem;
+  border: 2px solid red;
+}
+
+.research-nav {
+  width: 220px;
+  border: 2px solid blue;
+}
+
+.research-content {
+  flex: 1;
+  border: 2px solid green;
+}
+
 /* ======================================================
    HOME PAGE
    ====================================================== */
