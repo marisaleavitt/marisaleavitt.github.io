@@ -3,4 +3,6 @@ layout: base.njk
 title: Research
 ---
 
-Number of pages in all collection: {{ collections.all.length }}
+{% for item in collections.all %}
+- {{ item.url }}
+{% endfor %}
