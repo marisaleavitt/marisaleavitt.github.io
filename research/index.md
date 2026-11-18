@@ -16,6 +16,8 @@ title: Research
     
     <p>{{ item.inputPath }}</p>
 
+    <p>{{ item.inputPath | getNavImage }}</p>
+
     <p>{{ item.data.summary }}</p>
 
   </div>
