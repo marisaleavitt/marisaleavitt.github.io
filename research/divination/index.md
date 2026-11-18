@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: divination
+title: Divination
 type: Theme
 summary: "A series of design experiments and writing exploring conjuring, divination, and tarot in arts, design, and research"
 ---
