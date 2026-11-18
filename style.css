@@ -128,6 +128,28 @@ a:hover {
   display: block;
   margin-bottom: 1rem;
 }
+.research-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.research-nav {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.research-content {
+  flex: 1;
+}
+
+.research-nav-item {
+  margin-bottom: 0.5rem;
+}
+
+.research-nav-item a {
+  text-decoration: none;
+}
 
 /* ======================================================
    HOME PAGE
