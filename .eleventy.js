@@ -15,12 +15,13 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => {
         return a.inputPath.localeCompare(b.inputPath);
 });
-  eleventyConfig.addCollection("research", function(collectionApi) {
-  return collectionApi
-    .getFilteredByGlob("research/**/index.md")
-    .sort((a, b) => a.data.title.localeCompare(b.data.title));
-
-      });
+eleventyConfig.addCollection("research", function(collectionApi) {
+  return collectionApi.getAll().filter(item =>
+    item.url &&
+    item.url.startsWith("/research/") &&
+    item.url !== "/research/"
+  );
+});
   });
   
 
