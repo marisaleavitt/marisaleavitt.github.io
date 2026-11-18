@@ -8,23 +8,23 @@ title: Research
 {% for item in collections.research %}
   {% if item.url != "/research/" %}
 
-  <div class="research-card">
+<div class="research-card">
 
-    {% assign navImage = item.inputPath | getNavImage %}
+  {% assign navImage = item.inputPath | getNavImage %}
+
+  <a href="{{ item.url }}">
 
     {% if navImage %}
-      <a href="{{ item.url }}">
-        <img src="{{ navImage }}" alt="{{ item.data.title }}">
-      </a>
+      <img src="{{ navImage }}" alt="{{ item.data.title }}">
     {% endif %}
 
-    <h3>
-      <a href="{{ item.url }}">{{ item.data.title }}</a>
-    </h3>
+    <div class="research-card-title">
+      {{ item.data.title }}
+    </div>
 
-    <p>{{ item.data.summary }}</p>
+  </a>
 
-  </div>
+</div>
 
   {% endif %}
 {% endfor %}
