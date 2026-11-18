@@ -119,11 +119,14 @@ a:hover {
   max-width: 900px;
 }
 .research-card {
-  margin-bottom: 2.5rem;
+  position: relative;
+  width: 260px;
+  margin-bottom: 2rem;
 }
 
-.research-card {
-  margin-bottom: 2.5rem;
+.research-card a {
+  text-decoration: none;
+  color: white;
 }
 
 .research-card img {
@@ -131,7 +134,6 @@ a:hover {
   height: 180px;
   object-fit: cover;
   display: block;
-  margin-bottom: 0.75rem;
 }
 
 .research-nav {
@@ -164,6 +166,21 @@ a:hover {
 
 .research-content {
   flex: 1;
+}
+.research-card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 1rem;
+
+  background: rgba(0,0,0,0.45);
+  color: white;
+
+  font-family: Avenir, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
 }
 
 /* ======================================================
