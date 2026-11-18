@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: research.njk
 title: SLOPE
 type: Project
 summary: "Salvaged Legacies: Obsolescence in Practice and Experience"
