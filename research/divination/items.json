@@ -5,7 +5,7 @@
       "necromancy-cloth.jpg",
       "necromancy-cloth-test.jpg"
     ],
-    "description": "A collaborative design studio with Sofia Giurdi"
+    "description": "A collaborative design studio with Sofia Giurdi."
   },
   {
     "title": "Tarot Workshop",
@@ -13,20 +13,20 @@
     "media": [
       "tarot-workshop.jpg"
     ],
-    "description": "Tarot workshop for artists and researchers, keys to the past."
+    "description": "Tarot workshop for artists and researchers, Keys to the Past."
   },
   {
     "title": "Witch Circle",
     "media": [
       "witchcircle.png"
     ],
-    "description": "At the Nordic fabulations workshop in CPH."
-  }
-   {
-    "title": "Conjuring device",
-    "media": [
-      "nav.jpg",
-    ],
-    "description": "At the Nordic fabulations workshop in Oslo..."
+    "description": "At the Nordic Fabulations workshop in Copenhagen."
   },
+  {
+    "title": "Conjuring Device",
+    "media": [
+      "nav.jpg"
+    ],
+    "description": "Created for the Nordic Fabulations workshop in Oslo."
+  }
 ]
