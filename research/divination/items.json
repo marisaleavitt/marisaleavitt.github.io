@@ -1,7 +1,7 @@
 [
   {
     "title": "Necromancy Cloth",
-    "images": [
+    "media": [
       "necromancy-cloth.jpg",
       "necromancy-cloth-test.jpg"
     ],
@@ -9,21 +9,22 @@
   },
   {
     "title": "Tarot Workshop",
-    "images": [
+    "featured": true,
+    "media": [
       "tarot-workshop.jpg"
     ],
     "description": "Tarot workshop for artists and researchers, keys to the past."
   },
   {
     "title": "Witch Circle",
-    "images": [
+    "media": [
       "witchcircle.png"
     ],
     "description": "At the Nordic fabulations workshop in CPH."
   }
    {
     "title": "Conjuring device",
-    "images": [
+    "media": [
       "nav.jpg",
     ],
     "description": "At the Nordic fabulations workshop in Oslo..."
